@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asuuuuuu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif,;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        #changing-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="changing-text">
+        assuuuuuu
+    </div>
+
+    <script>
+        const textElement = document.getElementById('changing-text');
+        const texts = ["Aku tertipu kediamanmu", 
+        "Yang ku anggap semuanya baik-baik saja",
+        "Ku tak menyangka dibelakangku",
+        "Kau tigakan cintaku yang", 
+        "Hanya kepadamu", 
+        "",];
+        let currentIndex = 0;
+
+        function changeText() {
+            textElement.textContent = texts[currentIndex];
+            currentIndex = (currentIndex + 1) % texts.length;
+        }
+
+        changeText();
+        setInterval(changeText, 6000);
+    </script>
+</body>
+</html>
